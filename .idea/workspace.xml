@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a6696e-be92-43fe-a8ac-c4315648b195" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TabUser.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ByElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ByElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DataForTestCreateUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataForTestCreateUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartForTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartForTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LoginUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="352">
+              <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,14 +32,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/StartForTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1354">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="376">
+              <caret line="170" column="43" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#sleep#0;class#StartForTest#0" />
+                <element signature="method#startForLogin#0;class#StartForTest#0" />
+                <element signature="method#isElementPresent#0;class#StartForTest#0" />
+                <element signature="method#equalsElementByTable#0;class#StartForTest#0" />
+                <element signature="method#isElementPresent#1;class#StartForTest#0" />
+                <element signature="method#isElementPresent#2;class#StartForTest#0" />
+                <element signature="method#findElementsRoles#0;class#StartForTest#0" />
+                <element signature="method#findElementsInTable#0;class#StartForTest#0" />
+                <element signature="method#elementTableClick#0;class#StartForTest#0" />
+                <element signature="method#isTableElementPresent#0;class#StartForTest#0" />
+                <element signature="method#logOut#0;class#StartForTest#0" />
+                <element signature="method#findTabUsers#0;class#StartForTest#0" />
+                <element signature="e#6157#6169#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ByElements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -42,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DataForTestCreateUsers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+            <state relative-caret-position="242">
+              <caret line="11" column="110" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -63,7 +90,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,9 +99,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$USER_HOME$/.m2/settings.xml" />
         <option value="$PROJECT_DIR$/src/test/java/IsElementPresent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ByElements.java" />
         <option value="$PROJECT_DIR$/src/test/java/DataForTestCreateUsers.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LoginUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/StartForTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LoginUser.java" />
       </list>
     </option>
   </component>
@@ -108,7 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,15 +144,33 @@
               <item name="TabUser" type="b2602c69:ProjectViewProjectNode" />
               <item name="TabUser" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TabUser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TabUser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TabUser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TabUser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TabUser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TabUser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538844663765" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538857249484" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -228,18 +274,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_TestNG - 2018.09.29 at 23h 16m 55s.xml">
-      <configuration name="Run TestNG" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Run_TestNG - 2018.09.29 at 23h 18m 11s.xml">
-      <configuration name="Run TestNG" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Run_TestNG - 2018.09.29 at 23h 26m 32s.xml">
-      <configuration name="Run TestNG" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Run_TestNG - 2018.09.29 at 23h 30m 02s.xml">
-      <configuration name="Run TestNG" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="Run_TestNG - 2018.09.29 at 23h 38m 32s.xml">
       <configuration name="Run TestNG" configurationId="TestNG" />
     </history-entry>
@@ -258,6 +292,18 @@
     <history-entry file="Run_TestNG - 2018.09.30 at 17h 57m 07s.xml">
       <configuration name="Run TestNG" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="Run_TestNG - 2018.10.06 at 20h 06m 03s.xml">
+      <configuration name="Run TestNG" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Run_TestNG - 2018.10.06 at 21h 11m 51s.xml">
+      <configuration name="Run TestNG" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Run_TestNG - 2018.10.06 at 22h 59m 03s.xml">
+      <configuration name="Run TestNG" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Run_TestNG - 2018.10.06 at 23h 03m 00s.xml">
+      <configuration name="Run TestNG" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,8 +316,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="-8" width="1860" height="1089" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3149387" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1560758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,7 +327,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3278328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995272" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,7 +335,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49925596" weight="0.6689038" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50074404" side_tool="true" weight="1.0" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49925596" weight="0.32662192" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49925596" weight="0.32563257" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -358,27 +405,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LoginUser.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ByElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataForTestCreateUsers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="242">
+          <caret line="11" column="110" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/StartForTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1354">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="49" />
+        <state relative-caret-position="376">
+          <caret line="170" column="43" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#sleep#0;class#StartForTest#0" />
+            <element signature="method#startForLogin#0;class#StartForTest#0" />
+            <element signature="method#isElementPresent#0;class#StartForTest#0" />
+            <element signature="method#equalsElementByTable#0;class#StartForTest#0" />
+            <element signature="method#isElementPresent#1;class#StartForTest#0" />
+            <element signature="method#isElementPresent#2;class#StartForTest#0" />
+            <element signature="method#findElementsRoles#0;class#StartForTest#0" />
+            <element signature="method#findElementsInTable#0;class#StartForTest#0" />
+            <element signature="method#elementTableClick#0;class#StartForTest#0" />
+            <element signature="method#isTableElementPresent#0;class#StartForTest#0" />
+            <element signature="method#logOut#0;class#StartForTest#0" />
+            <element signature="method#findTabUsers#0;class#StartForTest#0" />
+            <element signature="e#6157#6169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

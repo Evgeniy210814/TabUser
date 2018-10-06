@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import static org.junit.Assert.assertTrue;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class StartForTest  {
             e.printStackTrace();
         }
     }
+    //
     public static void startForLogin(String loginName, String password)  {
         driver.findElement(By.id("form_email")).sendKeys(loginName);
         driver.findElement(By.id("form_password")).sendKeys(password);
@@ -29,11 +32,9 @@ public class StartForTest  {
         login.findElement(By.className("btn")).click();
         sleep(800);
         //WebElement tab =driver.findElement(By.xpath("//*[.='Users']"));
-        WebElement tab =driver.findElement(By.xpath("//span[contains(text(),'Users')]"));
-        tab.click();
-        sleep(800);
-        tab.findElement(By.xpath("//*[.='User management']")).click();
+
     }
+    //метод для поиска элементов
     public static boolean isElementPresent(By locator) {
         try {
             driver.findElement(locator);
@@ -43,6 +44,7 @@ public class StartForTest  {
             return false;
         }
     }
+    //метод для проверки шапки таблицы пользователей
     public static boolean equalsElementByTable(By locator) {
         List<WebElement> table = new ArrayList<WebElement>();
         String[] equalsTextTable = new String[]{"Email", "Name", "Surname", "IM/Skype", "Roles", "Last login", " "};
@@ -64,6 +66,7 @@ public class StartForTest  {
                 return false;
         }
     }
+    //метод для поиска элементов
     public static boolean isElementPresent(By locator, String sendkeys) {
         try {
             driver.findElement(locator).sendKeys(sendkeys);
@@ -73,6 +76,7 @@ public class StartForTest  {
         }
 
     }
+    //метод для поиска элементов и клик по ним
     public static boolean isElementPresent(By locator, boolean elPres){
         if (elPres==true){
             try {
@@ -88,6 +92,7 @@ public class StartForTest  {
         }
         return false;
     }
+    //метод для потска ролей в таблице пользователя
     public static boolean findElementsRoles(By locator, List<WebElement> elements,String roles){
         try{
             List<WebElement> elementRoles = new ArrayList<WebElement>();
@@ -106,6 +111,7 @@ public class StartForTest  {
             return false;
         }
     }
+    //метод для поиска заданных элементов в таблице
     public static List<WebElement> findElementsInTable() {
         List<WebElement> table = new ArrayList<WebElement>();
         List<WebElement> table_2 = new ArrayList<WebElement>();
@@ -134,6 +140,7 @@ public class StartForTest  {
         }
 
     }
+    //метод для поиска заданного пользователя пользователей
     public static boolean isTableElementPresent(List<WebElement> elements,int countTableUserName, String dataForReg){
         if(elements.get(countTableUserName).getText().equals(dataForReg)) {
            System.out.println(dataForReg);
@@ -142,6 +149,29 @@ public class StartForTest  {
             return false;
 
     }
+    //метод для выхода из текущего пользователя
+    public static void logOut(By dropDownList, By buttonOut){
+        assertTrue(isElementPresent(dropDownList,true));//поиск списка с логом на выход
+        assertTrue(isElementPresent(buttonOut,true));//нажать кнопку что бы вылогиниться
+    }
+    //метод для поиска и входа на вкладку users
+    public static void findTabUsers(By elementDropDownListUsers, By elementUserManager){
+        try {
+            WebElement tab =driver.findElement(elementDropDownListUsers);
+            tab.click();
+            sleep(800);
+            tab.findElement(elementUserManager).click();
+        }
+        catch (NoSuchElementException e){
+            System.out.println(e);
+        }
 
+    }
+    //метод для проверки работы выбранных пользователей по наличию доступных вкладок
+    public static void findTabsForTetsRoles(By element){
+        List<WebElement> board = new ArrayList<WebElement>();
+        board=driver.findElements(element);
+        System.out.println(board.size());
+    }
 }
 

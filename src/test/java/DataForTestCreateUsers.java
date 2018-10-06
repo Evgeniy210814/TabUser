@@ -8,4 +8,6 @@ public class DataForTestCreateUsers {
    public static String[] dataForReg = new String[]{"ForAutoTets@gmail.com", "123456", nameForReg,surnameForReg, "Not login", ""};
    public static String[] dataForRoles = new String[]{"Administrator","Affiliate manager","Sales manager"};
    public static String forRoles;
+   public static String url = "http://offers.dev.affise.com/";
+   public static String[] massTabsForRoleTest = new String[]{"Dashboard","Statistics","Offers","Advertisers",""};
 }

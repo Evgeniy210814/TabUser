@@ -17,6 +17,7 @@ public class ByElements {
     public static By findButtonLogOut = By.xpath("//a[contains(text(),'Sign out')]");
     public static By findDropDownListUsers = By.xpath("//span[contains(text(),'Users')]");
     public static By findUserManagerInList = By.xpath("//*[.='User management']");
+    public static By findNameTabsForTestRoles =By.xpath("//ul[@class='nav']/li");
 
 
 }

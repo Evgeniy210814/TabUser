@@ -126,7 +126,7 @@ public class StartForTest  {
         }
         return null;
     }
-
+    //для кнопок удалить или редактировать пользователя
     public static boolean elementTableClick(By locator, List<WebElement> elements, int countElement){
         List<WebElement> table= new ArrayList<WebElement>();
         try{
@@ -168,10 +168,27 @@ public class StartForTest  {
 
     }
     //метод для проверки работы выбранных пользователей по наличию доступных вкладок
-    public static void findTabsForTetsRoles(By element){
+    public static boolean findTabsForTetsRoles(By element, String[] massTabs){
         List<WebElement> board = new ArrayList<WebElement>();
         board=driver.findElements(element);
-        System.out.println(board.size());
+        /*if(board.size()==12){
+            return true;
+        }*/
+        for (int i = 0; i <board.size() ; i++) {
+            try{
+                for (int j = 0; j <board.size(); j++) {
+                    if(board.get(i).getText().equals(massTabs[j])){
+
+                    }
+                }
+            }
+            catch (Exception e){
+                System.out.println(e);
+                return false;
+            }
+
+        }
+        return true;
     }
 }
 

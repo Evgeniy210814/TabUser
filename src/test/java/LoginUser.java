@@ -75,9 +75,10 @@ public class LoginUser {
         Date date = new Date();
         String d = date.toString();
         System.out.println(d);
-        StartForTest.findTabsForTetsRoles(By.xpath("//ul[@class='nav']/li"));
+
+
     }
-    //@Test(priority = 4)
+    @Test(priority = 4)
     //проверка созданного пользователя с ролью админа
     public void testTableUsersAdminRole(){
         sleep(500);
@@ -86,19 +87,22 @@ public class LoginUser {
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[2]));//поиск имени в таблице
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[3]));//поиск sur name в таблице
         StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
-        //assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(driver),0));
+        //assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(driver),0));//удаление или редактирование пользователя
         sleep(800);
         StartForTest.startForLogin(DataForTestCreateUsers.loginForReg,DataForTestCreateUsers.passwordForReg);//залогинится под созданным пользователем
-        //StartForTest.findTabUsers(ByElements.findDropDownListUsers,ByElements.findUserManagerInList);//поиск вкладки users и переход во вкладку
+        assertTrue(StartForTest.findTabsForTetsRoles((ByElements.findNameTabsForTestRoles), DataForTestCreateUsers.massTabsForRoleTestAdmin));//проверка наличия всех вкладок соответствущих текущему пользователю
+        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);
 
 
 
     }
-    //@Test(priority = 5)
+    @Test(priority = 5)
     //создание пользователя с ролью партнера
     public void editCreatedUserAffiliateRole(){
-
-        driver.findElement(ByElements.findButtonAdd).click();
+        StartForTest.startForLogin(DataForTestCreateUsers.loginName,DataForTestCreateUsers.password);//вход под root пользователем
+        StartForTest.findTabUsers(ByElements.findDropDownListUsers,ByElements.findUserManagerInList);//поиск вкладки users
+        //driver.findElement(ByElements.findButtonAdd).click();
+        assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(),0));//удаление или редактирование пользователя
         assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxAdminRole,true));//выключение роли админа
         assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxAffiliateRole,true));//включение роли партнера
         assertTrue(StartForTest.isElementPresent(ByElements.findButtonSave,true));//сохранение внесенных изменений
@@ -107,7 +111,6 @@ public class LoginUser {
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[2]));//поиск имени в таблице
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[3]));//поиск sur name в таблице
         StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
-
     }
 
     @AfterClass

@@ -9,5 +9,7 @@ public class DataForTestCreateUsers {
    public static String[] dataForRoles = new String[]{"Administrator","Affiliate manager","Sales manager"};
    public static String forRoles;
    public static String url = "http://offers.dev.affise.com/";
-   public static String[] massTabsForRoleTest = new String[]{"Dashboard","Statistics","Offers","Advertisers",""};
+   public static String[] massTabsForRoleTestAdmin = new String[]{"Dashboard","Statistics","Offers","Advertisers","Affiliates","Tickets","Billing","Users","News","Settings","Instruments","Export"};
+   public static String[] massTabsForRoleTestAffiliate = new String[]{"Dashboard","Statistics","Offers","Advertisers","Affiliates","Tickets","Billing","News","Instruments","Export"};
+
 }

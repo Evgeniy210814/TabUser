@@ -40,6 +40,7 @@ public class LoginUser {
     public void start() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.navigate().to(DataForTestCreateUsers.url);
     }
 
@@ -50,7 +51,7 @@ public class LoginUser {
     }
     @Test(priority = 2)
     public void checkForUsersTabElements() {
-        sleep(800);
+        //sleep(800);
         assertTrue(StartForTest.isElementPresent(ByElements.findUserControlPanel));
         assertTrue(StartForTest.isElementPresent(ByElements.findElementFieldSearch));
         assertTrue(StartForTest.isElementPresent(ByElements.findElementFieldCount));
@@ -60,11 +61,11 @@ public class LoginUser {
         Alert alert = driver.switchTo().alert();
         alert.accept();*/
     }
-    @Test(priority = 3)
+    //@Test(priority = 3)
     //создание нового пользователя
     public void chectCreateNewUsers(){
         driver.findElement(ByElements.findButtonAdd).click();
-        sleep(800);
+        //sleep(800);
 
         assertTrue(StartForTest.isElementPresent(ByElements.findFieldFormEmail,DataForTestCreateUsers.loginForReg));//ввод мыла в поле
         assertTrue(StartForTest.isElementPresent(ByElements.findFieldForPassword,DataForTestCreateUsers.passwordForReg));//ввод пароля в поле
@@ -78,25 +79,25 @@ public class LoginUser {
 
 
     }
-    @Test(priority = 4)
+    //@Test(priority = 4)
     //проверка созданного пользователя с ролью админа
     public void testTableUsersAdminRole(){
-        sleep(500);
+        //sleep(500);
         assertTrue(StartForTest.findElementsRoles(By.cssSelector("span"),StartForTest.findElementsInTable(),DataForTestCreateUsers.dataForRoles[0]));//поиск ролей в таблице админ
         //assertTrue(StartForTest.findElementsRoles(By.cssSelector("span"),StartForTest.findElementsInTable(),DataForTestCreateUsers.dataForRoles[1]));
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[2]));//поиск имени в таблице
         assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[3]));//поиск sur name в таблице
         StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
         //assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(driver),0));//удаление или редактирование пользователя
-        sleep(800);
+        //sleep(800);
         StartForTest.startForLogin(DataForTestCreateUsers.loginForReg,DataForTestCreateUsers.passwordForReg);//залогинится под созданным пользователем
         assertTrue(StartForTest.findTabsForTetsRoles((ByElements.findNameTabsForTestRoles), DataForTestCreateUsers.massTabsForRoleTestAdmin));//проверка наличия всех вкладок соответствущих текущему пользователю
-        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);
+        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
 
 
 
     }
-    @Test(priority = 5)
+    //@Test(priority = 5)
     //создание пользователя с ролью партнера
     public void editCreatedUserAffiliateRole(){
         StartForTest.startForLogin(DataForTestCreateUsers.loginName,DataForTestCreateUsers.password);//вход под root пользователем
@@ -107,12 +108,42 @@ public class LoginUser {
         assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxAffiliateRole,true));//включение роли партнера
         assertTrue(StartForTest.isElementPresent(ByElements.findButtonSave,true));//сохранение внесенных изменений
         assertTrue(StartForTest.findElementsRoles(By.cssSelector("span"),StartForTest.findElementsInTable(),DataForTestCreateUsers.dataForRoles[1]));//поиск ролей в таблице партнер
-        //assertTrue(StartForTest.findElementsRoles(By.cssSelector("span"),StartForTest.findElementsInTable(),DataForTestCreateUsers.dataForRoles[1]));
-        assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[2]));//поиск имени в таблице
-        assertTrue(StartForTest.isTableElementPresent(StartForTest.findElementsInTable(),1,DataForTestCreateUsers.dataForReg[3]));//поиск sur name в таблице
         StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
-    }
+        StartForTest.startForLogin(DataForTestCreateUsers.loginForReg,DataForTestCreateUsers.passwordForReg);//залогинится под созданным пользователем
+        assertTrue(StartForTest.findTabsForTetsRoles((ByElements.findNameTabsForTestRoles), DataForTestCreateUsers.massTabsForRoleTestAffiliate));//проверка наличия всех вкладок соответствущих текущему пользователю
+        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
 
+    }
+    //@Test(priority = 6)
+    public void editCreatedUserSalesRoles(){
+        StartForTest.startForLogin(DataForTestCreateUsers.loginName,DataForTestCreateUsers.password);//вход под root пользователем
+        StartForTest.findTabUsers(ByElements.findDropDownListUsers,ByElements.findUserManagerInList);//поиск вкладки users
+        assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(),0));//удаление или редактирование пользователя
+        assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxAffiliateRole,true));//выключение роли партнера
+        assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxSalesRole,true));//включение роли продавца
+        assertTrue(StartForTest.isElementPresent(ByElements.findButtonSave,true));//сохранение внесенных изменений
+        assertTrue(StartForTest.findElementsRoles(By.cssSelector("span"),StartForTest.findElementsInTable(),DataForTestCreateUsers.dataForRoles[2]));//поиск ролей в таблице партнер
+        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
+        StartForTest.startForLogin(DataForTestCreateUsers.loginForReg,DataForTestCreateUsers.passwordForReg);//залогинится под созданным пользователем
+        assertTrue(StartForTest.findTabsForTetsRoles((ByElements.findNameTabsForTestRoles), DataForTestCreateUsers.massTabsForRoleTestSales));//проверка наличия всех вкладок соответствущих текущему пользователю
+        StartForTest.logOut(ByElements.findLogOutList,ByElements.findButtonLogOut);//выход из пользователя
+        StartForTest.startForLogin(DataForTestCreateUsers.loginName,DataForTestCreateUsers.password);//вход под root пользователем
+        StartForTest.findTabUsers(ByElements.findDropDownListUsers,ByElements.findUserManagerInList);//поиск вкладки users
+        assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(),1));//удаление или редактирование пользователя
+        Alert alert = driver.switchTo().alert();
+        sleep(500);
+        alert.accept();
+        sleep(500);
+    }
+    @Test(priority = 7)
+    public void editCreatedUserRoles(){
+        //StartForTest.startForLogin(DataForTestCreateUsers.loginName,DataForTestCreateUsers.password);//вход под root пользователем
+        //StartForTest.findTabUsers(ByElements.findDropDownListUsers,ByElements.findUserManagerInList);//поиск вкладки users
+        assertTrue(StartForTest.elementTableClick(By.cssSelector("a"),StartForTest.findElementsInTable(),0));//удаление или редактирование пользователя
+        //assertTrue(StartForTest.isElementPresent(ByElements.findCheckBoxSalesRole,true));//включение роли продавца
+
+        StartForTest.findRolesInList(ByElements.findRolesInList,StartForTest.generateRandomValue(23));
+    }
     @AfterClass
     public void close() {
         driver.quit();

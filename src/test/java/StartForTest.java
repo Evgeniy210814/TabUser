@@ -12,6 +12,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class StartForTest  {
@@ -51,7 +52,7 @@ public class StartForTest  {
         try {
             WebElement thead = driver.findElement(locator);
             table = thead.findElements(By.xpath(".//tr/th"));
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < table.size(); i++) {
                 if (equalsTextTable[i].contains(table.get(i).getText())) {
                     try {
                         table.get(i).click();
@@ -97,7 +98,7 @@ public class StartForTest  {
         try{
             List<WebElement> elementRoles = new ArrayList<WebElement>();
             elementRoles=elements.get(4).findElements(locator);
-            //System.out.println(elementRoles.size());
+            System.out.println(elements.get(4).getText());
             for (int i = 0; i <elementRoles.size() ; i++) {
                 //System.out.println(elementRoles.get(i).getText());
 
@@ -130,8 +131,10 @@ public class StartForTest  {
     public static boolean elementTableClick(By locator, List<WebElement> elements, int countElement){
         List<WebElement> table= new ArrayList<WebElement>();
         try{
+
             table=elements.get(6).findElements(locator);
             sleep(700);
+            System.out.println(table.size());
             table.get(countElement).click();
             return true;
         }
@@ -190,5 +193,26 @@ public class StartForTest  {
         }
         return true;
     }
+
+    //поиск случайной роли для пользователя
+    public static void findRolesInList(By locator,int choiceSectorRoles){
+    List<WebElement> listRoles = new ArrayList<WebElement>();
+        DataForTestCreateUsers.listRolesSector = driver.findElements(locator);
+        System.out.println(DataForTestCreateUsers.listRolesSector.size());
+        DataForTestCreateUsers.listRolesSector.get(choiceSectorRoles);
+        System.out.println(DataForTestCreateUsers.listRolesSector.get(choiceSectorRoles).getText());
+        if(choiceSectorRoles>=5 && choiceSectorRoles<=17){
+
+        }
+        for(WebElement element:DataForTestCreateUsers.listRolesSector){
+            System.out.println(element.getText());
+        }
+    }
+    public static int generateRandomValue(int max){
+        Random random= new Random();
+        DataForTestCreateUsers.randomValueForRoles= random.nextInt(max);
+        return DataForTestCreateUsers.randomValueForRoles;
+    }
+
 }
 
